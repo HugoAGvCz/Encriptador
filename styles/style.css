@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --color-primario: #F8F6E3;
+    --color-secundario: #041C32;
+    --color-terciario: #eeeac2;
+    --color-hover: #ffffff;
+    --color-hover-secundario: #09335a; 
+    --fuente-monsterrat: "Monserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: var(--color-primario); 
+    box-sizing: border-box;
+    color: var(--color-secundario);
+}
+
+.header {
+    padding: 2% 0 0 15%;
+} 
+
+.presentacion {
+    display: flex;
+    align-items: center;
+    padding: 6% 15%;
+    justify-content: space-between;
+    gap: 200px;
+}
+.presentacion__input {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 300px;
+    
+}
+.presentacion__input__texto {
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color-secundario);
+    background: var(--color-primario);
+    border: 2px solid var(--color-secundario);
+    padding: 10px; 
+    width: 100%;
+    border: none;
+}
+.presentacion__botones {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+
+}
+.presentacion__botones_texto { 
+    font-family: var(--fuente-monsterrat);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-secundario);
+    
+}
+.presentacion__btn__encriptar {
+    color: var(--color-primario);
+    background: var(--color-secundario);
+    font-family: var(--fuente-monsterrat);
+    border: 2px solid var(--color-secundario);
+    width: 50%; 
+    font-size: 1.5rem;
+    font-weight: 400;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 21.5px 0;   
+}
+.presentacion__btn__encriptar:hover {
+    background: var(--color-hover-secundario); 
+    cursor: pointer;
+}
+.presentacion__btn__desencriptar {
+    font-family: var(--fuente-monsterrat);
+    background: var(--color-terciario);
+    border: 2px solid var(--color-secundario);
+    width: 50%; 
+    font-size: 1.5rem;
+    font-weight: 400;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 21.5px 0;   
+}
+.presentacion__btn__desencriptar:hover {
+    background: var(--color-hover); 
+    cursor: pointer;
+}
+.presentacion__mostrar { 
+    width: 40%;
+    display: flex;
+    flex-direction: column;  
+    padding: 2%;
+    gap: 300px;
+    border: 1px solid #000000;  
+    background-color: #ffffff;  
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); 
+}
+.mostrar__texto { 
+    display: flex;
+    flex-direction: column;
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color-secundario); 
+}
+.presentacion__mostrar__img {
+    padding-top: 2%;
+}
+.texto_desencriptado_info {
+    font-family: var(--fuente-monsterrat);
+    font-size: 1.5rem;
+    align-items: center;
+    font-weight: 400; 
+}
+.presentacion__botones__copiar {
+    font-family: var(--fuente-monsterrat);
+    background: var(--color-terciario);
+    border: 2px solid var(--color-secundario);
+    width: 50%; 
+    font-size: 1.5rem;
+    font-weight: 400;
+    border-radius: 24px;
+    padding: 21.5px 0;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+.presentacion__botones__copiar:hover {
+    background: var(--color-secundario);
+    color: var(--color-primario);
+    cursor: pointer;
+}
+
+.footer {
+    background: var(--color-secundario);
+    color: var(--color-primario);
+    padding: 24px; 
+    text-align: center;
+    font-family: var(--fuente-monsterrat);  
+    font-size: 1.5rem;
+    font-weight: 400;
+} 
+
+@media (max-width: 1200px) {
+    .header {
+        padding: 8%;
+    }
+    .header__menu {
+        justify-content: center;
+    }
+    .presentacion {
+        flex-direction: column;
+        padding: 5%;
+        gap: 100px;
+    }
+    .presentacion__input {
+        width: auto;
+        gap: 150px;
+    }
+    .presentacion__mostrar {
+        width: auto;
+        gap: 150px;
+    }
+}
+@media (max-width: 768px) {
+    .presentacion__mostrar__img {
+      display: none;
+    }
+  }

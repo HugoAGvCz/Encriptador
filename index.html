@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Encriptador de textos</title>
+</head>
+<body>
+    <header class="header">
+        <img src="./assets/Logo.png" alt="Logo Alura">
+    </header>
+    <main class="presentacion">
+        <section class="presentacion__input">
+            <input type="text" id="input_texto" class="presentacion__input__texto" placeholder="Ingrese aquí el texto">
+            <div class="presentacion__botones">
+                <span class="presentacion__botones_texto">
+                    <i class="fa-solid fa-circle-exclamation"></i> Solo letras minúsculas y sin acentos.
+                </span>
+                <button class="presentacion__btn__encriptar" id="encriptar" onclick="encriptar()" class="btn__encriptar">Encriptar</button>
+                <button class="presentacion__btn__desencriptar" id="desencriptar" onclick="desencriptar()" class="btn__desencriptar">Desencriptar</button>
+            </div>
+        </section>
+        <section class="presentacion__mostrar">
+            <div id="texto_desencriptado" class="mostrar__texto">
+                <img class="presentacion__mostrar__img" src="./assets/Muñeco.png" alt="Mujer descubiendo un diamante con una lupa">
+                <p class="texto_desencriptado_info">
+                    Ingresa el texto que deseas encriptar o desencriptar.
+                </p> 
+            </div>
+            <div class="presentacion__botones">
+                <button class="presentacion__botones__copiar" id="copiar" onclick="copiar()" class="btn__copiar">Copiar</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p>
+            <span id="current-year"></span> Hugo Galván 
+        </p>
+    </footer>
+
+    <script src="./app.js"></script>
+</body>
+</html>
